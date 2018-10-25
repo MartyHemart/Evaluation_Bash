@@ -12,10 +12,11 @@ Plusieurs choix s'offre à vous
 
 Si tous les logiciels sont installés vous pouvez lancer "script.sh"
 
-Vous devez aussi si vous souhaitez vous connecter en SSH décommentés la ligne 50
+Vous devez aussi si vous souhaitez vous connecter en SSH décommentez la ligne 50
 
-Attention si vous décommentez la ligne 50 vous ne pourrez plus voir le vagrant en cours (connexion automatiquement en SSH à la vagrant qui vient d'êtres créés)
+Attention si vous décommentez la ligne 50 vous ne pourrez plus voir les vagrant en cours (connexion automatiquement en SSH à la vagrant qui vient d'êtres créés)
 
+Après l'installation de votre nouvelle vagrant, vous pourrez voir les vagrants actuels et les eteindres.
 
 * Les versions disponible pour Linux :
   * Ubuntu/xenial64
