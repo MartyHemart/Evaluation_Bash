@@ -64,3 +64,25 @@ read ok
       else
            echo "Vous n'avez rien choisie, bye."
       fi
+      # On demande à l'utilisateur de choisir la machine à utiliser
+  optionsVagrant=("Eteindre une vagrant" "Eteindre toutes les vagrant")
+  sleep 1
+  echo -e "Que voulez vous faire ?"
+  select responseVagrant in "${optionsVagrant[@]}";do
+      case ${responseVagrant} in
+          "Eteindre une vagrant" ) actionVagrant="shutDown";break;;
+          "Eteindre toutes les vagrant" ) actionVagrant="shutDownAll";break;;
+      esac
+  done
+# Eteindre une vagrant en marche
+  if [ "$actionVagrant" == "shutDown" ]
+      then
+      sleep 1
+      echo -e "Quelle machine voulez vous éteindre ? (ID)"
+      read -p idDown
+              sleep 1
+      vagrant halt $idDown
+      echo -e "La vagrant $idDown a bien été éteinte"
+      sleep 1
+  fi
+      
