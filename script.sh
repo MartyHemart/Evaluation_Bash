@@ -65,6 +65,7 @@ read ok
            echo "Vous n'avez rien choisie, bye."
       fi
       # On demande à l'utilisateur de choisir la machine à utiliser
+ while true ; do
   optionsVagrant=("Eteindre une vagrant" "Eteindre toutes les vagrant")
   sleep 1
   echo -e "Que voulez vous faire ?"
@@ -85,4 +86,5 @@ read ok
       echo -e "La vagrant $idDown a bien été éteinte"
       sleep 1
   fi
+ done
       
