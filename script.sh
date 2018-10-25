@@ -45,11 +45,22 @@ read ok
         sed -i -e 's/base/'$ubuntu'/' Vagrantfile #|| echo "Attention, erreur detecter !!"#Modification du fichier "Vagrantfile" avec affichage de l'erreur au cas ou !
         sed -i -e 's/# config.vm.network "private_network", ip: "192.168.33.10"/config.vm.network "private_network", ip: "192.168.33.10"'/ Vagrantfile #|| echo "Attention, erreur detecter !!"#Modification du fichier "Vagrantfile" avec affichage de l'erreur au cas ou !
         sed -i -e 's/# config.vm.synced_folder "..\/data", "\/vagrant_data"/config.vm.synced_folder ".\/data", "\/var\/www\/html"'/ Vagrantfile #|| echo "Attention, erreur detecter !!"#Modification du fichier "Vagrantfile" avec affichage de l'erreur au cas ou !
-        #mkdir data   #Création du dossier data
-        #vagrant up   #Lancement de la vagrant
+        mkdir data   #Création du dossier data
+        vagrant up   #Lancement de la vagrant
         #vagrant ssh  #Connexion SSH a la vagrant
    elif [ "$ok" = "no" ] || [ "$ok" = "NO" ]; then #Si il indique no ou NO le programme ferme.
         echo "merci à vous ! A bientôt"
    else
         echo "Vous n'avez rien choisie, bye."
    fi
+
+   echo -e "\e[42m\e[1mVoulez-vous voir les vagrant en cours d'utilisation ?\e[27m\e[0m: "
+   read ouinon
+        if [ "$ouinon" = "oui" ] || [ "$ouinon" = "OUI" ]; then  #l'utilisateur indique si il veux voir les vagrant actif
+        echo -e "Actuellement, voici les vagrant en cours d'utilisation : "
+        vagrant global-status
+      elif [ "$ouinon" = "non" ] || [ "$ouinon" = "NON" ]; then #Si il indique non ou NON le programme ferme.
+           echo "merci à vous ! A bientôt"
+      else
+           echo "Vous n'avez rien choisie, bye."
+      fi
