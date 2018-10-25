@@ -4,7 +4,7 @@
 
 ### Avant utilisation merci de suivre le guide ->
 
-Lancer le script "verif.Sh"
+Lancer le script "verif.sh"
 
 Si tous les logiciels sont installés vous pouvez lancer "script.sh"
 
