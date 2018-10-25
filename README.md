@@ -8,7 +8,7 @@ Lancer le script "verif.sh"
 
 Si tous les logiciels sont installés vous pouvez lancer "script.sh"
 
-Vous devez aussi si vous souhaitez vous connecter en SSH décommentés la ligne50
+Vous devez aussi si vous souhaitez vous connecter en SSH décommentés la ligne 50
 
 Attention si vous décommentez la ligne 50 vous ne pourrez plus voir le vagrant en cours
 
